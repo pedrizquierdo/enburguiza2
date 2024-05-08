@@ -11,7 +11,7 @@ package mx.itson.enburguiza.entities;
 public class Client {
     
     private String address;
-    
+    private String pedro;
     
     
 }

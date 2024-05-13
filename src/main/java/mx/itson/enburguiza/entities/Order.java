@@ -13,14 +13,14 @@ import java.util.Date;
 public class Order {
 
     /**
-     * @return the estimateTime
+     * @return the estimateTime the delivery person arrives
      */
     public int getEstimateTime() {
         return estimateTime;
     }
 
     /**
-     * @param estimateTime the estimateTime to set
+     * @param estimateTime in wich the delirevy person who will be awarded arrives
      */
     public void setEstimateTime(int estimateTime) {
         this.estimateTime = estimateTime;

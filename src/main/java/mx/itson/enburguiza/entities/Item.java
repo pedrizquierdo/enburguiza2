@@ -10,4 +10,8 @@ package mx.itson.enburguiza.entities;
  */
 public class Item {
     
+    private String name;
+    private int quantity;
+    private double price;
+    
 }

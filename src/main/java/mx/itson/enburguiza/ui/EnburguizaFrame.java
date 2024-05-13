@@ -142,11 +142,11 @@ public class EnburguizaFrame extends javax.swing.JFrame {
                 File file = fileChooser.getSelectedFile();
                 
                 byte  fileBytes[] = Files.readAllBytes(file.toPath());
-                String contenido = new String(fileBytes, StandardCharsets.UTF_8);
+                String content = new String(fileBytes, StandardCharsets.UTF_8);
                 
-            App app = new App().deserialize(contenido);  
+            App app = new App().deserialize(content);  
             
-            labelEstimate.setText(app.getOrder().getEstimateTime() + " seconds");
+            labelEstimate.setText(app.getClient().getName() + " seconds");
             labelDistance.setText(app.getOrder().getDistance() + " miles");
             labelRestaurant.setText(app.getOrder().getRestaurant());
             labelAddress.setText(app.getClient().getAddress());

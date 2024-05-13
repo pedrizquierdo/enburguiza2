@@ -59,7 +59,7 @@ public class App {
     private Item item;
     
     
-    public App deserializar (String json) {
+    public App deserialize (String json) {
         App app = new App ();
         try {
             app= new Gson().fromJson(json, App.class);

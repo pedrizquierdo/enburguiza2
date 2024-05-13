@@ -54,6 +54,7 @@ public class App {
         this.item = item;
     }
     
+    private String rating;
     private Client client;
     private Order order;
     private Item item;

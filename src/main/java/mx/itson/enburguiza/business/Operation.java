@@ -11,10 +11,10 @@ package mx.itson.enburguiza.business;
 public class Operation {
     
     /**
-     * Calculates the sum of two numbers.
-     * @param num1 The first number to add.
-     * @param num2 The second number to add.
-     * @return The sum of the two numbers.
+     * Calculates the sum of two numbers
+     * @param num1 the first number to add
+     * @param num2 the second number to add
+     * @return the sum of the two numbers
      */
     
     public static double add(double num1, double num2){
@@ -22,9 +22,9 @@ public class Operation {
     }
     
     /**
-     * Calculates taxes on a given price.
-     * @param price The price to which taxes will be applied.
-     * @return The total price after taxes (original price plus taxes).
+     * Calculates taxes on a given price
+     * @param price the price to which taxes will be applied
+     * @return the total price after taxes (original price plus taxes)
      */
     
     public double taxes(double price){
@@ -33,16 +33,15 @@ public class Operation {
     }
     
     /**
-     * 
+     * Assigns numbers to each element in the given array and returns the result as a new array
      * @param array the array to be numbered
      * @return the array as a list
      */
      public static String[] assignNumber(String[] array) {
-        String[] resultado = new String[array.length];
+        String[] result = new String[array.length];
         for (int i = 0; i < array.length; i++) {
-            resultado[i] = (i + 1) + ". " + array[i];
+            result[i] = (i + 1) + ". " + array[i];
         }
-        return resultado;
+        return result;
     }
-    
 }

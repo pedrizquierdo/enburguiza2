@@ -32,4 +32,17 @@ public class Operation {
         return taxes;
     }
     
+    /**
+     * 
+     * @param array the array to be numbered
+     * @return the array as a list
+     */
+     public static String[] asignarNumeros(String[] array) {
+        String[] resultado = new String[array.length];
+        for (int i = 0; i < array.length; i++) {
+            resultado[i] = (i + 1) + ". " + array[i];
+        }
+        return resultado;
+    }
+    
 }

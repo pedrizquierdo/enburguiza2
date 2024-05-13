@@ -37,7 +37,7 @@ public class Operation {
      * @param array the array to be numbered
      * @return the array as a list
      */
-     public static String[] asignarNumeros(String[] array) {
+     public static String[] assignNumber(String[] array) {
         String[] resultado = new String[array.length];
         for (int i = 0; i < array.length; i++) {
             resultado[i] = (i + 1) + ". " + array[i];

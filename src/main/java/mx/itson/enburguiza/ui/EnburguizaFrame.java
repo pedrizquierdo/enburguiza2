@@ -4,6 +4,16 @@
  */
 package mx.itson.enburguiza.ui;
 
+import java.io.File;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
+import javax.swing.JFileChooser;
+import javax.swing.table.DefaultTableModel;
+import mx.itson.enburguiza.entities.App;
+
 /**
  *
  * @author 980024653
@@ -28,7 +38,13 @@ public class EnburguizaFrame extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        labelEnburguiza = new javax.swing.JLabel();
+        labelEstimate = new javax.swing.JLabel();
+        labelDistance = new javax.swing.JLabel();
+        labelRestaurant = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        labelAddress = new javax.swing.JLabel();
+        buttonJson = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -37,44 +53,125 @@ public class EnburguizaFrame extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 207, 81));
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("SF Pro Display", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Enburguiza");
-        jLabel1.setToolTipText("");
+        labelEnburguiza.setBackground(new java.awt.Color(255, 255, 255));
+        labelEnburguiza.setFont(new java.awt.Font("SF Pro Display", 1, 36)); // NOI18N
+        labelEnburguiza.setForeground(new java.awt.Color(255, 255, 255));
+        labelEnburguiza.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelEnburguiza.setText("Enburguiza");
+        labelEnburguiza.setToolTipText("");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(634, Short.MAX_VALUE))
+            .addComponent(labelEnburguiza, javax.swing.GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(labelEnburguiza)
+                .addGap(0, 6, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 80));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 50));
+
+        labelEstimate.setFont(new java.awt.Font("SF Pro", 0, 13)); // NOI18N
+        labelEstimate.setText("Estimate Time");
+        jPanel1.add(labelEstimate, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
+
+        labelDistance.setFont(new java.awt.Font("SF Pro", 0, 13)); // NOI18N
+        labelDistance.setText("Distance");
+        jPanel1.add(labelDistance, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, -1, -1));
+
+        labelRestaurant.setFont(new java.awt.Font("SF Pro Display", 1, 24)); // NOI18N
+        labelRestaurant.setText("Restaurant");
+        jPanel1.add(labelRestaurant, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 360, -1));
+
+        jPanel3.setBackground(new java.awt.Color(249, 249, 249));
+        jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        labelAddress.setFont(new java.awt.Font("SF Pro Display", 0, 18)); // NOI18N
+        labelAddress.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        labelAddress.setText("Address");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(labelAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 436, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(labelAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 440, 80));
+
+        buttonJson.setText("Files...");
+        buttonJson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonJsonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(buttonJson, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 730, 80, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonJsonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonJsonActionPerformed
+
+        try{
+            JFileChooser fileChooser = new JFileChooser();
+            fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
+            
+            if(fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION){
+                File file = fileChooser.getSelectedFile();
+                
+                byte  fileBytes[] = Files.readAllBytes(file.toPath());
+                String contenido = new String(fileBytes, StandardCharsets.UTF_8);
+                
+            App app = new App().deserialize(contenido);  
+            
+            labelEstimate.setText(app.getOrder().getEstimateTime() + " seconds");
+            labelDistance.setText(app.getOrder().getDistance() + " miles");
+            labelRestaurant.setText(app.getOrder().getRestaurant());
+            labelAddress.setText(app.getClient().getAddress());
+            
+            
+            DateFormat dateFormat = new SimpleDateFormat("dd 'de' MMMM 'de' yyyy", new Locale("ES","mx"));
+            
+            
+            
+         
+            
+            }
+            
+        }catch (Exception ex) {
+            System.err.println(ex.getMessage());
+        }
+        
+        
+
+
+        
+        
+        
+        
+    }//GEN-LAST:event_buttonJsonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -113,8 +210,14 @@ public class EnburguizaFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton buttonJson;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel labelAddress;
+    private javax.swing.JLabel labelDistance;
+    private javax.swing.JLabel labelEnburguiza;
+    private javax.swing.JLabel labelEstimate;
+    private javax.swing.JLabel labelRestaurant;
     // End of variables declaration//GEN-END:variables
 }

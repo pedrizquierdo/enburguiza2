@@ -10,8 +10,13 @@ package mx.itson.enburguiza.business;
  */
 public class Operation {
     
-    public static double suma(double num1, double num2){
+    public static double add(double num1, double num2){
         return num1 + num2;
     }
-   
+    
+    public double taxes(double price){
+        double taxes = (price * 0.16) + price;
+        return taxes;
+    }
+    
 }

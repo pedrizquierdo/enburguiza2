@@ -12,8 +12,8 @@ public class Operation {
     
     /**
      * Calculates the sum of two numbers.
-     * @param num1 The first number to plus.
-     * @param num2 The second number to plus.
+     * @param num1 The first number to add.
+     * @param num2 The second number to add.
      * @return The sum of the two numbers.
      */
     

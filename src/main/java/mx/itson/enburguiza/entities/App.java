@@ -65,7 +65,7 @@ public class App {
             app= new Gson().fromJson(json, App.class);
             
     } catch(Exception ex) {
-            System.err.println("Ocurrio un error al deserializar" + ex.getMessage()); 
+            System.err.println("An error occurred while deserializing" + ex.getMessage()); 
     }
      return app;
     }

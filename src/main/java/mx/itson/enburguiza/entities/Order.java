@@ -27,42 +27,42 @@ public class Order {
     }
 
     /**
-     * @return 
+     * @return distance from the delivery person
      */
     public double getDistance() {
         return distance;
     }
 
     /**
-     * @param distance the distance to set
+     * @param distance from the delivery person to be set
      */
     public void setDistance(double distance) {
         this.distance = distance;
     }
 
     /**
-     * @return the restaurant
+     * @return the restaurant name 
      */
     public String getRestaurant() {
         return restaurant;
     }
 
     /**
-     * @param restaurant the restaurant to set
+     * @param restaurant the restaurant name to be set
      */
     public void setRestaurant(String restaurant) {
         this.restaurant = restaurant;
     }
 
     /**
-     * @return the taxes
+     * @return price of the taxes
      */
     public double getTaxes() {
         return taxes;
     }
 
     /**
-     * @param taxes the taxes to set
+     * @param taxes price of the taxes previusly assigned to be set
      */
     public void setTaxes(double taxes) {
         this.taxes = taxes;
@@ -70,14 +70,14 @@ public class Order {
 
 
     /**
-     * @return the number
+     * @return the number of the order
      */
     public int getNumber() {
         return number;
     }
 
     /**
-     * @param number the number to set
+     * @param number of the order to be set
      */
     public void setNumber(int number) {
         this.number = number;

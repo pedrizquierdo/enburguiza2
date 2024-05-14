@@ -69,6 +69,18 @@ public class App {
     public void setOrder(Order order) {
         this.order = order;
     }
+    /**
+     * return delivery person rating
+     */
+    public String getRating() {
+        return rating;
+    }
+    /**
+     * @param delivery person rating to be set
+     */
+    public void setRating(String Rating){
+        this.rating = rating;
+    }
 
     private Date date;
     private String rating;
@@ -76,7 +88,11 @@ public class App {
     private Order order;
     private List<Item> items;
     
-    
+    /**
+     * 
+     * @param json is the method to deseialize
+     * @return the deserialized json
+     */
     public App deserialize (String json) {
         App app = new App ();
         try {

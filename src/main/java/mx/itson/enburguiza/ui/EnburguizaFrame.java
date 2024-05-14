@@ -17,7 +17,7 @@ import mx.itson.enburguiza.entities.Item;
 
 /**
  *
- * @author 980024653
+ * @author luismorellb
  */
 public class EnburguizaFrame extends javax.swing.JFrame {
 
@@ -237,6 +237,8 @@ public class EnburguizaFrame extends javax.swing.JFrame {
             labelOrder.setText("Order #" + app.getOrder().getNumber());
             labelClient.setText(app.getClient().getName());
             labelCoordinate.setText(app.getClient().getCoordinates());
+            labelAddressc.setText(app.getOrder().getAddress());
+            labelPhonenumber.setText(app.getClient().getPhoneNumber());
             
             
             DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy", new Locale("EN","us"));

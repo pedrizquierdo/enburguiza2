@@ -14,7 +14,7 @@ import javax.swing.JFileChooser;
 import javax.swing.table.DefaultTableModel;
 import mx.itson.enburguiza.entities.App;
 import mx.itson.enburguiza.entities.Item;
-
+import mx.itson.enburguiza.business.Operation;
 /**
  *
  * @author luismorellb
@@ -55,7 +55,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
         labelPhonenumber = new javax.swing.JLabel();
         labelGmail = new javax.swing.JLabel();
         labelDistance = new javax.swing.JLabel();
-        labelTotalprice = new javax.swing.JLabel();
+        labelSubtotal = new javax.swing.JLabel();
         labelEstimate = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -211,9 +211,9 @@ public class EnburguizaFrame extends javax.swing.JFrame {
         labelDistance.setText("Distance:");
         jPanel1.add(labelDistance, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, 200, -1));
 
-        labelTotalprice.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
-        labelTotalprice.setText("Total price");
-        jPanel1.add(labelTotalprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 600, 117, -1));
+        labelSubtotal.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
+        labelSubtotal.setText("Subtotal");
+        jPanel1.add(labelSubtotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 117, -1));
 
         labelEstimate.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         labelEstimate.setText("Estimate Time:");
@@ -256,6 +256,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
             labelCoordinate.setText(app.getClient().getCoordinates());
             labelAddressc.setText(app.getClient().getAddress());
             labelPhonenumber.setText(app.getClient().getPhoneNumber());
+            labelGmail.setText(app.getClient().getEmail());
             
             
             DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy", new Locale("EN","us"));
@@ -346,7 +347,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
     private javax.swing.JLabel labelOrder;
     private javax.swing.JLabel labelPhonenumber;
     private javax.swing.JLabel labelRestaurant;
-    private javax.swing.JLabel labelTotalprice;
+    private javax.swing.JLabel labelSubtotal;
     private javax.swing.JTable tableItem;
     // End of variables declaration//GEN-END:variables
 }

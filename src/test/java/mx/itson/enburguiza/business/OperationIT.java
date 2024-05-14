@@ -43,11 +43,10 @@ public class OperationIT {
     public void testAdd() {
         System.out.println("add");
         double[] array = {5, 10};
-        double expResult = 0.0;
+        double expResult = 15;
         double result = Operation.Add(array);
         assertEquals(expResult, result, 0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
 
     /**
@@ -56,13 +55,12 @@ public class OperationIT {
     @Test
     public void testTaxes() {
         System.out.println("taxes");
-        double price = 0.0;
+        double price = 100;
         Operation instance = new Operation();
-        double expResult = 0.0;
+        double expResult = 116;
         double result = instance.taxes(price);
         assertEquals(expResult, result, 0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

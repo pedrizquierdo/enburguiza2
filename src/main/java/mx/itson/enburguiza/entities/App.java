@@ -32,14 +32,14 @@ public class App {
      * @return the items
      */
     public List<Item> getItems() {
-        return items;
+        return item;
     }
 
     /**
      * @param items the items to set
      */
     public void setItems(List<Item> items) {
-        this.items = items;
+        this.item = item;
     }
 
     /**
@@ -86,7 +86,7 @@ public class App {
     private String rating;
     private Client client;
     private Order order;
-    private List<Item> items;
+    private List<Item> item;
     
     /**
      * 

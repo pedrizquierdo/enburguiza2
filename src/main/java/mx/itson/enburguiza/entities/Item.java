@@ -46,7 +46,7 @@ public class Item {
     }
 
     /**
-     * @param Quantity of previously purchased items assigned to be set
+     * @param quantity of previously purchased items assigned to be set
      */
     public void setQuantity(int quantity) {
         this.quantity = quantity;

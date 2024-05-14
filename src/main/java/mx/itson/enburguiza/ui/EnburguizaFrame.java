@@ -41,11 +41,9 @@ public class EnburguizaFrame extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         labelEnburguiza = new javax.swing.JLabel();
         buttonJson = new javax.swing.JButton();
-        labelDistance = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         labelAddress = new javax.swing.JLabel();
         labelRestaurant = new javax.swing.JLabel();
-        labelEstimate = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableItem = new javax.swing.JTable();
         labelOrder = new javax.swing.JLabel();
@@ -53,6 +51,10 @@ public class EnburguizaFrame extends javax.swing.JFrame {
         labelDate = new javax.swing.JLabel();
         labelClient = new javax.swing.JLabel();
         labelCoordinate = new javax.swing.JLabel();
+        labelAddressc = new javax.swing.JLabel();
+        labelPhonenumber = new javax.swing.JLabel();
+        labelEstimate = new javax.swing.JLabel();
+        labelDistance = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -83,30 +85,24 @@ public class EnburguizaFrame extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addComponent(buttonJson, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelEnburguiza, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addComponent(labelEnburguiza, javax.swing.GroupLayout.PREFERRED_SIZE, 634, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(99, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(buttonJson, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(labelEnburguiza, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 3, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
+            .addComponent(labelEnburguiza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 80));
 
-        labelDistance.setFont(new java.awt.Font("SF Pro", 0, 13)); // NOI18N
-        labelDistance.setText("Distance:");
-        jPanel1.add(labelDistance, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 100, 80, -1));
-
         jPanel3.setBackground(new java.awt.Color(249, 249, 249));
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        labelAddress.setFont(new java.awt.Font("SF Pro Display", 0, 18)); // NOI18N
+        labelAddress.setFont(new java.awt.Font("SF Pro Display", 1, 18)); // NOI18N
         labelAddress.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         labelAddress.setText("Address");
 
@@ -114,17 +110,11 @@ public class EnburguizaFrame extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(labelAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 836, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(labelAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 846, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(labelAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(labelAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 850, 80));
@@ -132,11 +122,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
         labelRestaurant.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
         labelRestaurant.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelRestaurant.setText("Restaurant");
-        jPanel1.add(labelRestaurant, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 850, 50));
-
-        labelEstimate.setFont(new java.awt.Font("SF Pro", 0, 13)); // NOI18N
-        labelEstimate.setText("Estimate Time:");
-        jPanel1.add(labelEstimate, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 130, 20));
+        jPanel1.add(labelRestaurant, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 850, 50));
 
         tableItem.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -158,30 +144,37 @@ public class EnburguizaFrame extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 204));
 
-        labelDate.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        labelDate.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
         labelDate.setForeground(new java.awt.Color(51, 51, 51));
         labelDate.setText("Date");
 
-        labelClient.setFont(new java.awt.Font("SF Pro", 1, 18)); // NOI18N
+        labelClient.setFont(new java.awt.Font("SF Pro", 3, 18)); // NOI18N
         labelClient.setText("Client");
 
-        labelCoordinate.setFont(new java.awt.Font("SF Pro", 0, 14)); // NOI18N
+        labelCoordinate.setFont(new java.awt.Font("SF Pro", 3, 18)); // NOI18N
         labelCoordinate.setText("Coordinates");
+
+        labelAddressc.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
+        labelAddressc.setText("Address");
+
+        labelPhonenumber.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
+        labelPhonenumber.setText("Phone number");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelClient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(labelAddressc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelCoordinate)
-                            .addComponent(labelDate, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 290, Short.MAX_VALUE)))
-                .addContainerGap())
+                            .addComponent(labelClient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(labelCoordinate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())
+                    .addComponent(labelPhonenumber, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
+                    .addComponent(labelDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,10 +185,22 @@ public class EnburguizaFrame extends javax.swing.JFrame {
                 .addComponent(labelClient)
                 .addGap(18, 18, 18)
                 .addComponent(labelCoordinate)
-                .addContainerGap(370, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(labelAddressc)
+                .addGap(18, 18, 18)
+                .addComponent(labelPhonenumber)
+                .addContainerGap(278, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 530, 470));
+
+        labelEstimate.setFont(new java.awt.Font("SF Pro", 0, 13)); // NOI18N
+        labelEstimate.setText("Estimate Time:");
+        jPanel1.add(labelEstimate, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 180, 20));
+
+        labelDistance.setFont(new java.awt.Font("SF Pro", 0, 13)); // NOI18N
+        labelDistance.setText("Distance:");
+        jPanel1.add(labelDistance, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, 180, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -311,6 +316,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel labelAddress;
+    private javax.swing.JLabel labelAddressc;
     private javax.swing.JLabel labelClient;
     private javax.swing.JLabel labelCoordinate;
     private javax.swing.JLabel labelDate;
@@ -318,6 +324,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
     private javax.swing.JLabel labelEnburguiza;
     private javax.swing.JLabel labelEstimate;
     private javax.swing.JLabel labelOrder;
+    private javax.swing.JLabel labelPhonenumber;
     private javax.swing.JLabel labelRestaurant;
     private javax.swing.JTable tableItem;
     // End of variables declaration//GEN-END:variables

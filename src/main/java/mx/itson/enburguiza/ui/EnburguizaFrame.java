@@ -215,7 +215,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
 
         labelSubtotal.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
         labelSubtotal.setText("Subtotal");
-        jPanel1.add(labelSubtotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 117, -1));
+        jPanel1.add(labelSubtotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 280, -1));
 
         labelEstimate.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         labelEstimate.setText("Estimate Time:");
@@ -267,7 +267,13 @@ public class EnburguizaFrame extends javax.swing.JFrame {
             
             labelMessageRating.setText((app.getRating() >= 2)?  "Good Rating" : "Bad Rating");
             
-            labelSubtotal.setText("Precio" +app.getItems().get(0));
+            double total = 0;
+        for (Item i : app.getItems()) {
+            total += i.getPrice() * i.getQuantity();
+        }
+        
+        
+            labelSubtotal.setText("Subtotal " + total);
            
             
             

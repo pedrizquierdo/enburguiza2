@@ -81,7 +81,11 @@ public class App {
     public void setRating(String Rating){
         this.rating = rating;
     }
-
+    {
+    int Rating = 5;
+    String mesage = (Rating >= 2)? "Bad Rating"  : "Good Rating";
+    System.out.println(mesage);
+}
     private Date date;
     private String rating;
     private Client client;

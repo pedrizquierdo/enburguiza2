@@ -57,6 +57,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
         labelDistance = new javax.swing.JLabel();
         labelSubtotal = new javax.swing.JLabel();
         labelEstimate = new javax.swing.JLabel();
+        labelRating = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -219,6 +220,9 @@ public class EnburguizaFrame extends javax.swing.JFrame {
         labelEstimate.setText("Estimate Time:");
         jPanel1.add(labelEstimate, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 180, 20));
 
+        labelRating.setText("Rating");
+        jPanel1.add(labelRating, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 120, 40));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -257,6 +261,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
             labelAddressc.setText(app.getClient().getAddress());
             labelPhonenumber.setText(app.getClient().getPhoneNumber());
             labelGmail.setText(app.getClient().getEmail());
+            labelRating.setText(app.getRating());
             
             
             DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy", new Locale("EN","us"));
@@ -346,6 +351,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
     private javax.swing.JLabel labelGmail;
     private javax.swing.JLabel labelOrder;
     private javax.swing.JLabel labelPhonenumber;
+    private javax.swing.JLabel labelRating;
     private javax.swing.JLabel labelRestaurant;
     private javax.swing.JLabel labelSubtotal;
     private javax.swing.JTable tableItem;

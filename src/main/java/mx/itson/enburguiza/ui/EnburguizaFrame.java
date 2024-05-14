@@ -13,6 +13,7 @@ import java.util.Locale;
 import javax.swing.JFileChooser;
 import javax.swing.table.DefaultTableModel;
 import mx.itson.enburguiza.entities.App;
+import mx.itson.enburguiza.entities.Item;
 
 /**
  *
@@ -47,7 +48,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
         labelRestaurant = new javax.swing.JLabel();
         labelEstimate = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tableItem = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -136,9 +137,8 @@ public class EnburguizaFrame extends javax.swing.JFrame {
         labelEstimate.setText("Estimate Time:");
         jPanel1.add(labelEstimate, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 190, 20));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tableItem.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
                 {null, null, null},
                 {null, null, null},
                 {null, null, null}
@@ -147,9 +147,9 @@ public class EnburguizaFrame extends javax.swing.JFrame {
                 "Item", "Quantity", "Price"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tableItem);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 770, 220));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 310, 770, 220));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -188,6 +188,18 @@ public class EnburguizaFrame extends javax.swing.JFrame {
             DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy", new Locale("EN","us"));
             labelDate.setText(dateFormat.format(app.getDate()));
             
+            DefaultTableModel model = (DefaultTableModel) tableItem.getModel();
+                model.setRowCount(0);
+                for(Item c : app.getItems()){
+                    model.addRow(new Object[]{
+                        c.getName(),
+                        c.getQuantity(),
+                        c.getPrice()
+                        
+                    
+                        }
+                    );
+                }
             
          
             
@@ -248,12 +260,12 @@ public class EnburguizaFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel labelAddress;
     private javax.swing.JLabel labelDate;
     private javax.swing.JLabel labelDistance;
     private javax.swing.JLabel labelEnburguiza;
     private javax.swing.JLabel labelEstimate;
     private javax.swing.JLabel labelRestaurant;
+    private javax.swing.JTable tableItem;
     // End of variables declaration//GEN-END:variables
 }

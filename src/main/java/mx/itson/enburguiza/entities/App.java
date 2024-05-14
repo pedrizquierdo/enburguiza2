@@ -15,6 +15,21 @@ import java.util.List;
 public class App {
 
     /**
+     * @return the rating
+     */
+    public Double getRating() {
+        return rating;
+    }
+
+    /**
+     * @param rating the rating to set
+     */
+    public void setRating(Double rating) {
+        this.rating = rating;
+    }
+
+
+    /**
      * @return the date
      */
     public Date getDate() {
@@ -72,25 +87,16 @@ public class App {
     /**
      * return delivery person rating
      */
-    public String getRating() {
-        return rating;
-    }
-    /**
-     * @param delivery person rating to be set
-     */
-    public void setRating(String Rating){
-        this.rating = rating;
-    }
-    {
-    int Rating = 5;
-    String mesage = (Rating >= 2)? "Bad Rating"  : "Good Rating";
-    System.out.println(mesage);
-}
+    
+    
+    
+  
     private Date date;
-    private String rating;
+    private Double rating;
     private Client client;
     private Order order;
     private List<Item> item;
+    
     
     /**
      * 

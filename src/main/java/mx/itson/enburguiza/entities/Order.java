@@ -4,7 +4,6 @@
  */
 package mx.itson.enburguiza.entities;
 
-import java.util.Date;
 
 /**
  *

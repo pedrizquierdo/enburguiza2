@@ -58,6 +58,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
         labelSubtotal = new javax.swing.JLabel();
         labelEstimate = new javax.swing.JLabel();
         labelRating = new javax.swing.JLabel();
+        labelMessageRating = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -221,7 +222,8 @@ public class EnburguizaFrame extends javax.swing.JFrame {
         jPanel1.add(labelEstimate, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 180, 20));
 
         labelRating.setText("Rating");
-        jPanel1.add(labelRating, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 120, 40));
+        jPanel1.add(labelRating, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 120, 40));
+        jPanel1.add(labelMessageRating, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -261,8 +263,9 @@ public class EnburguizaFrame extends javax.swing.JFrame {
             labelAddressc.setText(app.getClient().getAddress());
             labelPhonenumber.setText(app.getClient().getPhoneNumber());
             labelGmail.setText(app.getClient().getEmail());
-            labelRating.setText(app.getRating());
+            labelRating.setText("Current Rating: " + app.getRating());
             
+            labelMessageRating.setText((app.getRating() >= 2)?  "Good Rating" : "Bad Rating");
             
             DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy", new Locale("EN","us"));
             labelDate.setText("Requested at " + dateFormat.format(app.getDate()));
@@ -349,6 +352,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
     private javax.swing.JLabel labelEnburguiza;
     private javax.swing.JLabel labelEstimate;
     private javax.swing.JLabel labelGmail;
+    private javax.swing.JLabel labelMessageRating;
     private javax.swing.JLabel labelOrder;
     private javax.swing.JLabel labelPhonenumber;
     private javax.swing.JLabel labelRating;

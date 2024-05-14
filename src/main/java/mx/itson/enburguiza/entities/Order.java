@@ -13,14 +13,14 @@ import java.util.Date;
 public class Order {
 
     /**
-     * @return the address
+     * @return the restaurant Address
      */
     public String getAddress() {
         return address;
     }
 
     /**
-     * @param address the address to set
+     * @param address the restaurant Address to be set
      */
     public void setAddress(String address) {
         this.address = address;

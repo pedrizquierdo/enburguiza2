@@ -11,14 +11,17 @@ package mx.itson.enburguiza.business;
 public class Operation {
     
     /**
-     * Calculates the sum of two numbers
-     * @param num1 the first number to add
-     * @param num2 the second number to add
-     * @return the sum of the two numbers
+     * calculate the sum of the elements of an array
+     * @param array the array with which the sums will be made
+     * @return the total sum of the elements of the array
      */
-    
-    public static double add(double num1, double num2){
-        return num1 + num2;
+     public static int Add(double[] array) {
+        int result = 0;
+        
+        for (int i = 0; i < array.length; i++) {
+            result += array[i];
+        }
+        return result;
     }
     
     /**
@@ -26,7 +29,6 @@ public class Operation {
      * @param price the price to which taxes will be applied
      * @return the total price after taxes (original price plus taxes)
      */
-    
     public double taxes(double price){
         double taxes = (price * 0.16) + price;
         return taxes;

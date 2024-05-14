@@ -31,17 +31,5 @@ public class Operation {
         double taxes = (price * 0.16) + price;
         return taxes;
     }
-    
-    /**
-     * Assigns numbers to each element in the given array and returns the result as a new array
-     * @param array the array to be numbered
-     * @return the array as a list
-     */
-     public static String[] assignNumber(String[] array) {
-        String[] result = new String[array.length];
-        for (int i = 0; i < array.length; i++) {
-            result[i] = (i + 1) + ". " + array[i];
-        }
-        return result;
-    }
+
 }

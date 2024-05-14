@@ -115,7 +115,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
                 buttonJsonActionPerformed(evt);
             }
         });
-        jPanel1.add(buttonJson, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 810, 80, 30));
+        jPanel1.add(buttonJson, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 570, 80, 30));
 
         labelRestaurant.setFont(new java.awt.Font("SF Pro Display", 1, 18)); // NOI18N
         labelRestaurant.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

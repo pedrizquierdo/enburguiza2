@@ -237,7 +237,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
             labelOrder.setText("Order #" + app.getOrder().getNumber());
             labelClient.setText(app.getClient().getName());
             labelCoordinate.setText(app.getClient().getCoordinates());
-            labelAddressc.setText(app.getOrder().getAddress());
+            labelAddressc.setText(app.getClient().getAddress());
             labelPhonenumber.setText(app.getClient().getPhoneNumber());
             
             

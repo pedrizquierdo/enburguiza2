@@ -53,8 +53,10 @@ public class EnburguizaFrame extends javax.swing.JFrame {
         labelCoordinate = new javax.swing.JLabel();
         labelAddressc = new javax.swing.JLabel();
         labelPhonenumber = new javax.swing.JLabel();
-        labelEstimate = new javax.swing.JLabel();
+        labelGmail = new javax.swing.JLabel();
         labelDistance = new javax.swing.JLabel();
+        labelTotalprice = new javax.swing.JLabel();
+        labelEstimate = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -156,9 +158,13 @@ public class EnburguizaFrame extends javax.swing.JFrame {
 
         labelAddressc.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
         labelAddressc.setText("Address");
+        labelAddressc.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         labelPhonenumber.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
         labelPhonenumber.setText("Phone number");
+
+        labelGmail.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
+        labelGmail.setText("Gmail");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -167,14 +173,19 @@ public class EnburguizaFrame extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelAddressc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(labelDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelClient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(labelCoordinate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(labelCoordinate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(labelAddressc, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addContainerGap())
-                    .addComponent(labelPhonenumber, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
-                    .addComponent(labelDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(labelPhonenumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(labelGmail, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -189,24 +200,30 @@ public class EnburguizaFrame extends javax.swing.JFrame {
                 .addComponent(labelAddressc)
                 .addGap(18, 18, 18)
                 .addComponent(labelPhonenumber)
-                .addContainerGap(278, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(labelGmail)
+                .addContainerGap(238, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 530, 470));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 550, 470));
 
-        labelEstimate.setFont(new java.awt.Font("SF Pro", 0, 13)); // NOI18N
-        labelEstimate.setText("Estimate Time:");
-        jPanel1.add(labelEstimate, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 180, 20));
-
-        labelDistance.setFont(new java.awt.Font("SF Pro", 0, 13)); // NOI18N
+        labelDistance.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         labelDistance.setText("Distance:");
-        jPanel1.add(labelDistance, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, 180, -1));
+        jPanel1.add(labelDistance, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, 200, -1));
+
+        labelTotalprice.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
+        labelTotalprice.setText("Total price");
+        jPanel1.add(labelTotalprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 600, 117, -1));
+
+        labelEstimate.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
+        labelEstimate.setText("Estimate Time:");
+        jPanel1.add(labelEstimate, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 180, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -325,9 +342,11 @@ public class EnburguizaFrame extends javax.swing.JFrame {
     private javax.swing.JLabel labelDistance;
     private javax.swing.JLabel labelEnburguiza;
     private javax.swing.JLabel labelEstimate;
+    private javax.swing.JLabel labelGmail;
     private javax.swing.JLabel labelOrder;
     private javax.swing.JLabel labelPhonenumber;
     private javax.swing.JLabel labelRestaurant;
+    private javax.swing.JLabel labelTotalprice;
     private javax.swing.JTable tableItem;
     // End of variables declaration//GEN-END:variables
 }

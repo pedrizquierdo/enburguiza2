@@ -13,6 +13,21 @@ import java.util.Date;
 public class Order {
 
     /**
+     * @return the address
+     */
+    public String getAddress() {
+        return address;
+    }
+
+    /**
+     * @param address the address to set
+     */
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+   
+    /**
      * @return the estimateTime the delivery person arrives
      */
     public int getEstimateTime() {
@@ -83,6 +98,7 @@ public class Order {
         this.number = number;
     }
     
+    private String address;
     private int estimateTime;
     private double distance;
     private String restaurant;

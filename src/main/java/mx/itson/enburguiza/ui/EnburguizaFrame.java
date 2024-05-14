@@ -83,8 +83,8 @@ public class EnburguizaFrame extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addComponent(buttonJson, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelEnburguiza, javax.swing.GroupLayout.PREFERRED_SIZE, 607, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addComponent(labelEnburguiza, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(123, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -228,7 +228,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
             labelEstimate.setText(app.getOrder().getEstimateTime() + " seconds ");
             labelDistance.setText(app.getOrder().getDistance() + " miles");
             labelRestaurant.setText(app.getOrder().getRestaurant());
-            labelAddress.setText(app.getClient().getAddress());
+            labelAddress.setText(app.getOrder().getAddress());
             labelOrder.setText("Order #" + app.getOrder().getNumber());
             labelClient.setText(app.getClient().getName());
             labelCoordinate.setText(app.getClient().getCoordinates());

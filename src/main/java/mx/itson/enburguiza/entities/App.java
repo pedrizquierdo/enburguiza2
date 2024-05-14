@@ -5,12 +5,27 @@
 package mx.itson.enburguiza.entities;
 
 import com.google.gson.Gson;
+import java.util.List;
 
 /**
  *
  * @author pedrizquierdo
  */
 public class App {
+
+    /**
+     * @return the items
+     */
+    public List<Item> getItems() {
+        return items;
+    }
+
+    /**
+     * @param items the items to set
+     */
+    public void setItems(List<Item> items) {
+        this.items = items;
+    }
 
     /**
      * @return the client
@@ -40,24 +55,11 @@ public class App {
         this.order = order;
     }
 
-    /**
-     * @return the item
-     */
-    public Item getItem() {
-        return item;
-    }
-
-    /**
-     * @param item the item to set
-     */
-    public void setItem(Item item) {
-        this.item = item;
-    }
     
     private String rating;
     private Client client;
     private Order order;
-    private Item item;
+    private List<Item> items;
     
     
     public App deserialize (String json) {

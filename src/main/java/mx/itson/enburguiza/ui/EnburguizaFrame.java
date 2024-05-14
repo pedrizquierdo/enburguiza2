@@ -146,7 +146,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
                 
             App app = new App().deserialize(content);  
             
-            labelEstimate.setText(app.getClient().getName() + " seconds");
+            labelEstimate.setText(app.getOrder().getEstimateTime() + " seconds");
             labelDistance.setText(app.getOrder().getDistance() + " miles");
             labelRestaurant.setText(app.getOrder().getRestaurant());
             labelAddress.setText(app.getClient().getAddress());

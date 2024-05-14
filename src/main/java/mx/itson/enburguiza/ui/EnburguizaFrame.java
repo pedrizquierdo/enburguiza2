@@ -45,6 +45,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
         buttonJson = new javax.swing.JButton();
         labelRestaurant = new javax.swing.JLabel();
         labelEstimate = new javax.swing.JLabel();
+        labelDate = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,7 +67,8 @@ public class EnburguizaFrame extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelEnburguiza, javax.swing.GroupLayout.DEFAULT_SIZE, 964, Short.MAX_VALUE))
+                .addComponent(labelEnburguiza, javax.swing.GroupLayout.PREFERRED_SIZE, 813, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(11, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -76,11 +78,11 @@ public class EnburguizaFrame extends javax.swing.JFrame {
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 80));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 80));
 
         labelDistance.setFont(new java.awt.Font("SF Pro", 0, 13)); // NOI18N
         labelDistance.setText("Distance:");
-        jPanel1.add(labelDistance, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, 180, -1));
+        jPanel1.add(labelDistance, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 150, 180, -1));
 
         jPanel3.setBackground(new java.awt.Color(249, 249, 249));
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -93,7 +95,9 @@ public class EnburguizaFrame extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(labelAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 966, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(labelAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 839, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,7 +107,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 970, 80));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 830, 80));
 
         buttonJson.setText("Files...");
         buttonJson.addActionListener(new java.awt.event.ActionListener() {
@@ -111,22 +115,25 @@ public class EnburguizaFrame extends javax.swing.JFrame {
                 buttonJsonActionPerformed(evt);
             }
         });
-        jPanel1.add(buttonJson, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 730, 80, 30));
+        jPanel1.add(buttonJson, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 810, 80, 30));
 
         labelRestaurant.setFont(new java.awt.Font("SF Pro Display", 1, 18)); // NOI18N
         labelRestaurant.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelRestaurant.setText("Restaurant");
-        jPanel1.add(labelRestaurant, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 970, 30));
+        jPanel1.add(labelRestaurant, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 830, 30));
 
         labelEstimate.setFont(new java.awt.Font("SF Pro", 0, 13)); // NOI18N
         labelEstimate.setText("Estimate Time:");
-        jPanel1.add(labelEstimate, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 190, 20));
+        jPanel1.add(labelEstimate, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 190, 20));
+
+        labelDate.setText("Date");
+        jPanel1.add(labelDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 230, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 971, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,7 +163,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
             labelAddress.setText(app.getClient().getAddress());
             
             
-            DateFormat dateFormat = new SimpleDateFormat("dd 'de' MMMM 'de' yyyy", new Locale("ES","mx"));
+            DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy", new Locale("EN","us"));
             
             
             
@@ -219,6 +226,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel labelAddress;
+    private javax.swing.JLabel labelDate;
     private javax.swing.JLabel labelDistance;
     private javax.swing.JLabel labelEnburguiza;
     private javax.swing.JLabel labelEstimate;

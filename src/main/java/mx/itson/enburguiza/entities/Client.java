@@ -11,35 +11,35 @@ package mx.itson.enburguiza.entities;
 public class Client {
 
     /**
-     * @return the address
+     * @return the client´s addres
      */
     public String getAddress() {
         return address;
     }
 
     /**
-     * @param address the address to set
+     * @param address the client´s addres to be set
      */
     public void setAddress(String address) {
         this.address = address;
     }
 
     /**
-     * @return the name
+     * @return the name of the client
      */
     public String getName() {
         return name;
     }
 
     /**
-     * @param name the name to set
+     * @param name the name of the client to be set
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * @return the phoneNumber
+     * @return the Phone Number of the client
      */
     public String getPhoneNumber() {
         return phoneNumber;
@@ -53,28 +53,28 @@ public class Client {
     }
 
     /**
-     * @return the coordinates
+     * @return the client Coordinates
      */
     public String getCoordinates() {
         return coordinates;
     }
 
     /**
-     * @param coordinates the coordinates to set
+     * @param coordinates the client Coordinates to be set
      */
     public void setCoordinates(String coordinates) {
         this.coordinates = coordinates;
     }
 
     /**
-     * @return the email
+     * @return the client Email
      */
     public String getEmail() {
         return email;
     }
 
     /**
-     * @param email the email to set
+     * @param email the client Email to be set
      */
     public void setEmail(String email) {
         this.email = email;

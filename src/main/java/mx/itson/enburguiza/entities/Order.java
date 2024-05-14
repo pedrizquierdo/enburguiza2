@@ -27,7 +27,7 @@ public class Order {
     }
 
     /**
-     * @return the distance
+     * @return 
      */
     public double getDistance() {
         return distance;

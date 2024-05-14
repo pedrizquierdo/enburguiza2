@@ -267,6 +267,11 @@ public class EnburguizaFrame extends javax.swing.JFrame {
             
             labelMessageRating.setText((app.getRating() >= 2)?  "Good Rating" : "Bad Rating");
             
+            labelSubtotal.setText("Precio" +app.getItems().get(0));
+           
+            
+            
+            
             DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy", new Locale("EN","us"));
             labelDate.setText("Requested at " + dateFormat.format(app.getDate()));
             
@@ -278,6 +283,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
                         c.getQuantity(),
                         c.getPrice()
                         
+                
                     
                         }
                     );

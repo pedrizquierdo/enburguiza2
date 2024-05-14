@@ -42,10 +42,9 @@ public class OperationIT {
     @Test
     public void testAdd() {
         System.out.println("add");
-        double num1 = 0.0;
-        double num2 = 0.0;
+        double[] array = {5, 10};
         double expResult = 0.0;
-        double result = Operation.add(num1, num2);
+        double result = Operation.Add(array);
         assertEquals(expResult, result, 0);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");

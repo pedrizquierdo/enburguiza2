@@ -164,7 +164,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
             
             
             DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy", new Locale("EN","us"));
-            
+            labelDate.setText(dateFormat.format(app.getDate()));
             
             
          

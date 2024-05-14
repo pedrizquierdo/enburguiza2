@@ -5,6 +5,7 @@
 package mx.itson.enburguiza.entities;
 
 import com.google.gson.Gson;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -55,7 +56,7 @@ public class App {
         this.order = order;
     }
 
-    
+    private Date date;
     private String rating;
     private Client client;
     private Order order;

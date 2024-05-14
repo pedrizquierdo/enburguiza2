@@ -68,19 +68,6 @@ public class Order {
         this.taxes = taxes;
     }
 
-    /**
-     * @return the date
-     */
-    public Date getDate() {
-        return date;
-    }
-
-    /**
-     * @param date the date to set
-     */
-    public void setDate(Date date) {
-        this.date = date;
-    }
 
     /**
      * @return the number
@@ -100,7 +87,6 @@ public class Order {
     private double distance;
     private String restaurant;
     private double taxes;
-    private Date date;
     private int number;
    
 }

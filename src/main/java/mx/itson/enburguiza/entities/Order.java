@@ -27,7 +27,7 @@ public class Order {
 
    
     /**
-     * @return the estimateTime the delivery person arrives
+     * @return the estimate time for the delivery person to arrive
      */
     public int getEstimateTime() {
         return estimateTime;

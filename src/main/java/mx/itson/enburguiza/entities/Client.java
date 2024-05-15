@@ -11,14 +11,14 @@ package mx.itson.enburguiza.entities;
 public class Client {
 
     /**
-     * @return the client´s addres
+     * @return the client address
      */
     public String getAddress() {
         return address;
     }
 
     /**
-     * @param address the client´s addres to be set
+     * @param address the client address to be set
      */
     public void setAddress(String address) {
         this.address = address;
@@ -46,7 +46,7 @@ public class Client {
     }
 
     /**
-     * @param phoneNumber the phoneNumber to set
+     * @param phoneNumber the phone Number to be set
      */
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;

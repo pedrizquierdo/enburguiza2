@@ -16,14 +16,14 @@ public class Operation {
    
     /** 
      * Sums up the prices
-     * @param items it is the list where the prices are contained
+     * @param items it is the list where the prices and quantities are contained
      * @return the sum of all prices in the Json file
      */
 
     public static double calculateTotal(List<Item> items) {
         double total = 0;
-        for (Item item : items) {
-            total += item.getPrice() * item.getQuantity();
+        for (Item i : items) {
+            total += i.getPrice() * i.getQuantity();
         }
         return total;
     }

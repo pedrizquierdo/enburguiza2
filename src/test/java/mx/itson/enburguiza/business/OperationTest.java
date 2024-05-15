@@ -42,13 +42,12 @@ public class OperationTest {
     @Test
     public void testTaxes() {
         System.out.println("taxes");
-        double price = 0.0;
+        double price = 100;
         Operation instance = new Operation();
-        double expResult = 0.0;
+        double expResult = 116;
         double result = instance.taxes(price);
         assertEquals(expResult, result, 0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

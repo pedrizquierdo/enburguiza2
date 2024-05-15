@@ -149,7 +149,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 204));
 
-        labelDate.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
+        labelDate.setFont(new java.awt.Font("SF Pro", 3, 18)); // NOI18N
         labelDate.setForeground(new java.awt.Color(51, 51, 51));
         labelDate.setText("Date");
 
@@ -205,7 +205,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
                 .addComponent(labelPhonenumber)
                 .addGap(18, 18, 18)
                 .addComponent(labelGmail)
-                .addContainerGap(238, Short.MAX_VALUE))
+                .addContainerGap(239, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 550, 470));
@@ -274,7 +274,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
             
             double subtotal = Operation.calculateTotal(app.getItems());
             
-            labelSubtotal.setText("Subtotal " + subtotal);
+            labelSubtotal.setText("Subtotal: " + subtotal);
            
             Operation op = new Operation();
             Double total = op.taxes(subtotal);

@@ -39,42 +39,42 @@ public class Client {
     }
 
     /**
-     * @return the Phone Number of the client
+     * @return the phone number of the client
      */
     public String getPhoneNumber() {
         return phoneNumber;
     }
 
     /**
-     * @param phoneNumber the phone Number to be set
+     * @param phoneNumber the phone number of the client to be set
      */
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
     /**
-     * @return the client Coordinates
+     * @return the coordinates of the client
      */
     public String getCoordinates() {
         return coordinates;
     }
 
     /**
-     * @param coordinates the client Coordinates to be set
+     * @param coordinates the coordinates of the client to be set
      */
     public void setCoordinates(String coordinates) {
         this.coordinates = coordinates;
     }
 
     /**
-     * @return the client Email
+     * @return the email of the client
      */
     public String getEmail() {
         return email;
     }
 
     /**
-     * @param email the client Email to be set
+     * @param email the email of the client to be set
      */
     public void setEmail(String email) {
         this.email = email;

@@ -15,7 +15,7 @@ public class Operation {
     
    
     /** 
-     * sums up the prices
+     * Sums up the prices
      * @param items it is the list where the prices are contained
      * @return the sum of all prices in the Json file
      */

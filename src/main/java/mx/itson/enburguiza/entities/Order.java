@@ -12,14 +12,14 @@ package mx.itson.enburguiza.entities;
 public class Order {
 
     /**
-     * @return the restaurant Address
+     * @return the restaurant address
      */
     public String getAddress() {
         return address;
     }
 
     /**
-     * @param address the restaurant Address to be set
+     * @param address the restaurant address to be set
      */
     public void setAddress(String address) {
         this.address = address;
@@ -27,28 +27,28 @@ public class Order {
 
    
     /**
-     * @return the estimate time for the delivery person to arrive
+     * @return the estimate time of the delivery
      */
     public int getEstimateTime() {
         return estimateTime;
     }
 
     /**
-     * @param estimateTime in wich the delirevy person who will be awarded arrives
+     * @param estimateTime the estimate time of the delivery to be set
      */
     public void setEstimateTime(int estimateTime) {
         this.estimateTime = estimateTime;
     }
 
     /**
-     * @return distance from the delivery person
+     * @return the distance between the delivery guy and the client address
      */
     public double getDistance() {
         return distance;
     }
 
     /**
-     * @param distance from the delivery person to be set
+     * @param distance the distance between the delivery guy and the client address to be set
      */
     public void setDistance(double distance) {
         this.distance = distance;
@@ -69,19 +69,18 @@ public class Order {
     }
 
     /**
-     * @return price of the taxes
+     * @return the taxes of the client order
      */
     public double getTaxes() {
         return taxes;
     }
 
     /**
-     * @param taxes price of the taxes previusly assigned to be set
+     * @param taxes the taxes of the client order to be set
      */
     public void setTaxes(double taxes) {
         this.taxes = taxes;
     }
-
 
     /**
      * @return the number of the order
@@ -91,7 +90,7 @@ public class Order {
     }
 
     /**
-     * @param number of the order to be set
+     * @param number the number of the order to be set
      */
     public void setNumber(int number) {
         this.number = number;

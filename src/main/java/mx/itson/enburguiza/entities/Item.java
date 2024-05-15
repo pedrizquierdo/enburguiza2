@@ -11,42 +11,42 @@ package mx.itson.enburguiza.entities;
 public class Item {
 
     /**
-     * @return the price of each item that was previously assigned to it
+     * @return the price of each item the client ordered
      */
     public Double getPrice() {
         return price;
     }
 
     /**
-     * @param price of each item that was previously assigned to it to be set
+     * @param price the price of each item the client ordered to be set
      */
     public void setPrice(Double price) {
         this.price = price;
     }
 
     /**
-     * @return the name of each item previously assigned
+     * @return the name of each item the client ordered
      */
     public String getName() {
         return name;
     }
 
     /**
-     * @param name of each item previously assigned to be set
+     * @param name the name of each item the client ordered to be set
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * @return Quantity of previously purchased items assigned
+     * @return the quantity of each item the client ordered
      */
     public int getQuantity() {
         return quantity;
     }
 
     /**
-     * @param quantity of previously purchased items assigned to be set
+     * @param quantity the quantity of each item the client ordered to be set
      */
     public void setQuantity(int quantity) {
         this.quantity = quantity;

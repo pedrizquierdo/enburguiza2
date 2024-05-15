@@ -215,7 +215,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
         jPanel1.add(labelDistance, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 200, -1));
 
         labelSubtotal.setFont(new java.awt.Font("SF Pro", 3, 18)); // NOI18N
-        labelSubtotal.setText("Subtotal");
+        labelSubtotal.setText("Subtotal:");
         jPanel1.add(labelSubtotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 590, 280, -1));
 
         labelEstimate.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N

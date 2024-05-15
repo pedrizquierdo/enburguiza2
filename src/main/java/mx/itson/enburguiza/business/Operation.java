@@ -4,25 +4,26 @@
  */
 package mx.itson.enburguiza.business;
 
+import java.util.List;
+import mx.itson.enburguiza.entities.Item;
+
 /**
  *
  * @author alang
  */
 public class Operation {
     
-    /**
-     * calculate the sum of the elements of an array
-     * @param array the array with which the sums will be made
-     * @return the total sum of the elements of the array
-     */
-     public static int Add(double[] array) {
-        int result = 0;
-        
-        for (int i = 0; i < array.length; i++) {
-            result += array[i];
+   
+
+    public static double calculateTotal(List<Item> items) {
+        double total = 0;
+        for (Item item : items) {
+            total += item.getPrice() * item.getQuantity();
         }
-        return result;
+        return total;
     }
+
+
     
     /**
      * Calculates taxes on a given price

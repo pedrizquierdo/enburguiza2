@@ -13,11 +13,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
- * @author gals0
+ * @author Uli23
  */
-public class OperationIT {
+public class OperationTest {
     
-    public OperationIT() {
+    public OperationTest() {
     }
     
     @BeforeAll
@@ -37,30 +37,18 @@ public class OperationIT {
     }
 
     /**
-     * Test of add method, of class Operation.
-     */
-    @Test
-    public void testAdd() {
-        System.out.println("add");
-        double[] array = {5, 10};
-        double expResult = 15;
-        double result = Operation.Add(array);
-        assertEquals(expResult, result, 0);
-       
-    }
-
-    /**
      * Test of taxes method, of class Operation.
      */
     @Test
     public void testTaxes() {
         System.out.println("taxes");
-        double price = 100;
+        double price = 0.0;
         Operation instance = new Operation();
-        double expResult = 116;
+        double expResult = 0.0;
         double result = instance.taxes(price);
         assertEquals(expResult, result, 0);
-        
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
     
 }

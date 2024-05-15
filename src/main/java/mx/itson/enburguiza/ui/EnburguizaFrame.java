@@ -136,7 +136,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "Item", "Quantity", "Price"
+                "Item", "Quantity", "Unit price"
             }
         ));
         jScrollPane1.setViewportView(tableItem);

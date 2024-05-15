@@ -59,6 +59,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
         labelEstimate = new javax.swing.JLabel();
         labelRating = new javax.swing.JLabel();
         labelMessageRating = new javax.swing.JLabel();
+        labelTotal = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -211,19 +212,23 @@ public class EnburguizaFrame extends javax.swing.JFrame {
 
         labelDistance.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         labelDistance.setText("Distance:");
-        jPanel1.add(labelDistance, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, 200, -1));
+        jPanel1.add(labelDistance, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 200, -1));
 
-        labelSubtotal.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
+        labelSubtotal.setFont(new java.awt.Font("SF Pro", 3, 18)); // NOI18N
         labelSubtotal.setText("Subtotal");
-        jPanel1.add(labelSubtotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 280, -1));
+        jPanel1.add(labelSubtotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 590, 280, -1));
 
         labelEstimate.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         labelEstimate.setText("Estimate Time:");
-        jPanel1.add(labelEstimate, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 180, 20));
+        jPanel1.add(labelEstimate, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 230, 20));
 
         labelRating.setText("Rating");
-        jPanel1.add(labelRating, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 120, 40));
-        jPanel1.add(labelMessageRating, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, -1, -1));
+        jPanel1.add(labelRating, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 120, 40));
+        jPanel1.add(labelMessageRating, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 140, 30));
+
+        labelTotal.setFont(new java.awt.Font("SF Pro", 3, 18)); // NOI18N
+        labelTotal.setText("Total: ");
+        jPanel1.add(labelTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 630, 280, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -253,8 +258,8 @@ public class EnburguizaFrame extends javax.swing.JFrame {
                 
             App app = new App().deserialize(content);  
             
-            labelEstimate.setText(app.getOrder().getEstimateTime() + " seconds ");
-            labelDistance.setText(app.getOrder().getDistance() + " miles");
+            labelEstimate.setText("Estimate Time: " + app.getOrder().getEstimateTime() + " seconds ");
+            labelDistance.setText("Distance: " + app.getOrder().getDistance() + " miles");
             labelRestaurant.setText(app.getOrder().getRestaurant());
             labelAddress.setText(app.getOrder().getAddress());
             labelOrder.setText("Order #" + app.getOrder().getNumber());
@@ -267,14 +272,13 @@ public class EnburguizaFrame extends javax.swing.JFrame {
             
             labelMessageRating.setText((app.getRating() >= 2)?  "Good Rating" : "Bad Rating");
             
-            double total = 0;
-        for (Item i : app.getItems()) {
-            total += i.getPrice() * i.getQuantity();
-        }
-        
-        
-            labelSubtotal.setText("Subtotal " + total);
+            double subtotal = Operation.calculateTotal(app.getItems());
+            
+            labelSubtotal.setText("Subtotal " + subtotal);
            
+            Operation op = new Operation();
+            Double total = op.taxes(subtotal);
+            labelTotal.setText("Total: " + total);
             
             
             
@@ -370,6 +374,7 @@ public class EnburguizaFrame extends javax.swing.JFrame {
     private javax.swing.JLabel labelRating;
     private javax.swing.JLabel labelRestaurant;
     private javax.swing.JLabel labelSubtotal;
+    private javax.swing.JLabel labelTotal;
     private javax.swing.JTable tableItem;
     // End of variables declaration//GEN-END:variables
 }

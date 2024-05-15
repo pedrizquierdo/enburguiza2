@@ -14,6 +14,11 @@ import mx.itson.enburguiza.entities.Item;
 public class Operation {
     
    
+    /** 
+     * sums up the prices
+     * @param items it is the list where the prices are contained
+     * @return the sum of all prices in the Json file
+     */
 
     public static double calculateTotal(List<Item> items) {
         double total = 0;

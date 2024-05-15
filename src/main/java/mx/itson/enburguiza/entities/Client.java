@@ -7,6 +7,7 @@ package mx.itson.enburguiza.entities;
 /**
  *
  * @author pedrizquierdo
+ * Declares Client personal information
  */
 public class Client {
 

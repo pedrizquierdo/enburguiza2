@@ -14,6 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  *
  * @author Uli23
+ * Includes Junit test for the Operation method
  */
 public class OperationTest {
     

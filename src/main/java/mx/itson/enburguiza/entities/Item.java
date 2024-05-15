@@ -7,6 +7,7 @@ package mx.itson.enburguiza.entities;
 /**
  *
  * @author gals0
+ * Includes useful item information such as price, name and quantity
  */
 public class Item {
 

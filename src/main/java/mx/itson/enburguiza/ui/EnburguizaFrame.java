@@ -18,6 +18,7 @@ import mx.itson.enburguiza.business.Operation;
 /**
  *
  * @author luismorellb
+ * Its the main UI
  */
 public class EnburguizaFrame extends javax.swing.JFrame {
 

@@ -8,6 +8,7 @@ package mx.itson.enburguiza.entities;
 /**
  *
  * @author Uli23
+ * Includes information needed for the order like the restaurant address, estimate time, distance, etc.
  */
 public class Order {
 

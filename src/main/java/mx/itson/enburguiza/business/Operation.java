@@ -10,6 +10,7 @@ import mx.itson.enburguiza.entities.Item;
 /**
  *
  * @author alang
+ * Includes operation methods needed for prices
  */
 public class Operation {
     

@@ -11,6 +11,7 @@ import java.util.List;
 /**
  *
  * @author pedrizquierdo
+ * Includes a json deserialiazing method andcCalls and declares variables that are going to be deserialized
  */
 public class App {
 

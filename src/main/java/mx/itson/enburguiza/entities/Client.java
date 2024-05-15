@@ -39,14 +39,14 @@ public class Client {
     }
 
     /**
-     * @return the phone number of the client
+     * @return the phone Number of the client
      */
     public String getPhoneNumber() {
         return phoneNumber;
     }
 
     /**
-     * @param phoneNumber the phone number of the client to be set
+     * @param phoneNumber the phone Number of the client to be set
      */
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;

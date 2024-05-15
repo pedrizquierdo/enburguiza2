@@ -27,14 +27,14 @@ public class Order {
 
    
     /**
-     * @return the estimate time of the delivery
+     * @return the estimate Time of the delivery
      */
     public int getEstimateTime() {
         return estimateTime;
     }
 
     /**
-     * @param estimateTime the estimate time of the delivery to be set
+     * @param estimateTime the estimate Time of the delivery to be set
      */
     public void setEstimateTime(int estimateTime) {
         this.estimateTime = estimateTime;
